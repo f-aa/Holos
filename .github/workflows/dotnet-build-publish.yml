@@ -1,8 +1,8 @@
-name: Build and Test
+name: Build and publish new release
 
 on:
   push:
-    branches: [ "pr-test" ]
+    branches: [ "main" ]
 
 jobs:
   build:
