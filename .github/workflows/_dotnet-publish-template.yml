@@ -29,8 +29,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${SHORT_SHA}
-        release_name: Holos 4 - ${{ github.event.pull_request.created_at }}
+        tag_name: $SHORT_SHA
+        release_name: Holos 4 - $SHORT_SHA
         draft: true
         prerelease: false
 
