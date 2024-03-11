@@ -2,9 +2,9 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "f-aa-patch-1" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "f-aa-patch-1" ]
 
 jobs:
   build:
