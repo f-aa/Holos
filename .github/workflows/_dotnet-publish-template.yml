@@ -20,9 +20,9 @@ jobs:
         files: H.Core/
         dest: ${{ inputs.filename }}.zip
 
-    - name: Set outputs
+    - name: Set short SHA
       id: vars
-      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      run: echo "sha_short=`echo ${{ github.sha }} | cut -c1-8`" >> $GITHUB_OUTPUT
 
     - name: Create Draft Release
       id: create_release
