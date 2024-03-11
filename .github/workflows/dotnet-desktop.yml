@@ -27,3 +27,9 @@ jobs:
         release_name: Holos 4 - ${{ steps.vars.outputs.sha_short }}
         draft: true
         prerelease: false
+        
+    - uses: eregon/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ steps.create_release.outputs.id }}
