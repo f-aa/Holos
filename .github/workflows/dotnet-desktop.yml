@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Set outputs
       id: vars
-      run: echo "sha_short=`${{ github.sha }} | cut -c1-8`" >> $GITHUB_OUTPUT
+      run: echo "sha_short=`echo ${{ github.sha }} | cut -c1-8`" >> $GITHUB_OUTPUT
 
     - name: echo out
       run: echo ${{ steps.vars.outputs.sha_short }}
