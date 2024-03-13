@@ -39,6 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(OutputPath)\H.Content.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib\$(TargetFramework)\</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)\H.Infrastructure.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib\$(TargetFramework)\</PackagePath>
+    </Content>    
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
